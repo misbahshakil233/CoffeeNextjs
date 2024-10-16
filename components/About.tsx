@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa'; // Check mark icon
-
+import Image from 'next/image';
 const About = () => {
   return (
     <section id="about" className="relative min-h-screen p-12 text-gray-800 flex flex-col items-center justify-center">
@@ -42,14 +42,16 @@ const About = () => {
             </ul>
           </div>
 
-          {/* Center Image */}
-          <div className="flex justify-center items-center">
-            <img
-              src="https://assets-global.website-files.com/62d42d2f755658e8a8e4eb8a/6369abe095be04cb91e1c3d6_634a457e6668dd3d5578bc7a_Pango-Cafe%2526Restaurant-Newport-3.jpeg"
-              alt="Coffee"
-              className="w-full h-auto max-w-sm rounded-lg shadow-lg border-4 border-yellow-500 transform transition-transform duration-500 hover:scale-105"
-            />
-          </div>
+        {/* Center Image */}
+<div className="flex justify-center items-center">
+  <Image
+    src="https://assets-global.website-files.com/62d42d2f755658e8a8e4eb8a/6369abe095be04cb91e1c3d6_634a457e6668dd3d5578bc7a_Pango-Cafe%2526Restaurant-Newport-3.jpeg"
+    alt="Coffee"
+    width={800} // Update width
+    height={600} // Update height
+    className="w-full h-auto max-w-sm rounded-lg shadow-lg border-4 border-yellow-500 transform transition-transform duration-500 hover:scale-105"
+  />
+</div>
 
           {/* Journey Section */}
           <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transform hover:scale-105 transition-all duration-300">

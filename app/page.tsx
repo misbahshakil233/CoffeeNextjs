@@ -8,22 +8,23 @@ import Hero from "@/components/Hero";
 import InfoBanner from "@/components/InfoBanner";
 
 import Product from "@/components/Product";
-import Service from "@/components/Service ";
-import Image from "next/image";
+import Service from "@/components/Service";
+
+
 
 export default function Home() {
   return (
     <div>
-    <Hero />
-    <InfoBanner />
-    <About />
-    <CoffeeSlider />
-    <Product />
-    <ClientReviews />
-    <Service />
-    <DiscountOffer />
-    <Contact />
     
-        </div>
+      <Hero />
+      <InfoBanner /> 
+       <About />
+       <CoffeeSlider />
+      <Product />
+      <ClientReviews />
+      {/* <Service /> */}
+      {/* <DiscountOffer /> */}
+      <Contact />   
+    </div>
   );
 }

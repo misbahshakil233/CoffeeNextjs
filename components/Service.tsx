@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-
+import Image from 'next/image';
 const Service = () => {
   // State to manage the selected coffee image
   const [selectedImage, setSelectedImage] = useState(
@@ -37,7 +37,7 @@ const Service = () => {
 
         {/* Image Column */}
         <div className="flex-1">
-          <img
+          <Image
             src={selectedImage}
             alt="Coffee Selection"
             className="w-full h-[400px] object-cover rounded-lg shadow-lg"
@@ -53,7 +53,7 @@ const Service = () => {
             onClick={() => setSelectedImage(image.src)} // Update selected image on click
             className="cursor-pointer"
           >
-            <img
+            <Image
               src={image.src}
               alt={image.alt}
               className="w-48 h-40 rounded-lg border-2 border-transparent hover:border-yellow-500 transition"

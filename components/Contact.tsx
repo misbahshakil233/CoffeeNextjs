@@ -1,5 +1,5 @@
-"use client";
 import React from 'react';
+import Image from 'next/image';
 
 const Contact = () => {
   return (
@@ -40,7 +40,7 @@ const Contact = () => {
                 id="message"
                 name="message"
                 required
-                rows="4" // Uncommenting this for better accessibility
+                rows={4} // Set as a number
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 placeholder="Your Message"
               ></textarea>
@@ -53,9 +53,11 @@ const Contact = () => {
 
         {/* Right Column: Coffee Image */}
         <div className="flex-1">
-          <img
+          <Image
             src="https://thumbs.dreamstime.com/z/girl-calling-mobile-phone-drinking-coffee-sitting-park-bicycle-background-54997427.jpg?w=576"
             alt="Girl drinking coffee"
+            width={576} // Specify the width in pixels
+            height={400} // Specify the height in pixels
             className="w-full h-[400px] object-cover rounded-lg shadow-lg"
           />
         </div>

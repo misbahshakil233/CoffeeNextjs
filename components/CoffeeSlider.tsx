@@ -1,12 +1,29 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 // List of coffee-related images for the slider
 const coffeeImages = [
-  'https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-  'https://th.bing.com/th/id/R.0667cbae566ee27fd7076b9425172abe?rik=NgPUC2HHIq%2bavg&riu=http%3a%2f%2fhdwpro.com%2fwp-content%2fuploads%2f2020%2f02%2fAnimated-Coffee-Art.jpeg&ehk=9BAxknTdU5Pz1SmJl1Uy7Ak75hW2L88zVUw76UYtm3c%3d&risl=&pid=ImgRaw&r=0',
-  'https://th.bing.com/th/id/R.25f90fbfc2acabd09c16db299baf9e2b?rik=rlaLVzabBprKiQ&riu=http%3a%2f%2fwallsdesk.com%2fwp-content%2fuploads%2f2016%2f10%2fCoffee-High-Definition-Wallpapers.jpg&ehk=AuVANTOLRhSeWfH7qpKGH0PrFfJgGKD2R8sf6ey%2b6vg%3d&risl=&pid=ImgRaw&r=0',
-  'https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+  {
+    src: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: 'https://th.bing.com/th/id/R.0667cbae566ee27fd7076b9425172abe?rik=NgPUC2HHIq%2bavg&riu=http%3a%2f%2fhdwpro.com%2fwp-content%2fuploads%2f2020%2f02%2fAnimated-Coffee-Art.jpeg&ehk=9BAxknTdU5Pz1SmJl1Uy7Ak75hW2L88zVUw76UYtm3c%3d&risl=&pid=ImgRaw&r=0',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: 'https://th.bing.com/th/id/R.25f90fbfc2acabd09c16db299baf9e2b?rik=rlaLVzabBprKiQ&riu=http%3a%2f%2fwallsdesk.com%2fwp-content%2fuploads%2f2016%2f10%2fCoffee-High-Definition-Wallpapers.jpg&ehk=AuVANTOLRhSeWfH7qpKGH0PrFfJgGKD2R8sf6ey%2b6vg%3d&risl=&pid=ImgRaw&r=0',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    width: 800,
+    height: 600,
+  },
 ];
 
 const CoffeeSlider = () => {
@@ -36,9 +53,11 @@ const CoffeeSlider = () => {
               key={index}
               className="min-w-full h-80 flex-shrink-0"
             >
-              <img
-                src={image}
+              <Image
+                src={image.src}
                 alt={`Coffee ${index + 1}`}
+                width={image.width} // Set width
+                height={image.height} // Set height
                 className="w-full h-full object-cover"
               />
             </div>

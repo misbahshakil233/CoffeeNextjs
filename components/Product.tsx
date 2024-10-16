@@ -1,6 +1,6 @@
-"use client";
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 
 const Product = () => {
   return (
@@ -11,67 +11,65 @@ const Product = () => {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Card 1 */}
-          <div className="relative bg-white p-8 rounded-lg shadow-lg text-center h-[500px] transition-transform duration-300 hover:scale-105">
-            {/* Image that pops out */}
-            <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
-              <img
-                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?crop=entropy&fit=crop&w=500&q=60"
-                alt="Coffee 1"
-                className="w-40 h-40 rounded-full border-4 border-white shadow-lg"
-              />
-            </div>
-            {/* Content below the image */}
-            <h2 className="text-3xl font-semibold mt-24 mb-2">Product 1</h2>
-            <p className="text-gray-600 mt-4 font-normal text-lg px-4">
-              Enjoy a rich, bold, full-bodied coffee experience with our top-quality beans. A perfect balance of flavor and aroma for coffee enthusiasts.
-              Enjoy a rich, bold, full-bodied coffee experience with our top-quality beans. A perfect balance of flavor and aroma for coffee enthusiasts.
+         
           
-              Enjoy a rich, bold, full-bodied coffee experience with our top-quality beans. A perfect balance of flavor and aroma for coffee enthusiasts.
-          
-            </p>
-          </div>
 
           {/* Card 2 */}
           <div className="relative bg-white p-8 rounded-lg shadow-lg text-center h-[500px] transition-transform duration-300 hover:scale-105">
             {/* Image that pops out */}
             <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
-              <img
-                src="https://th.bing.com/th/id/OIP.bX52vTMUaO4fSjm9EBhFlgHaHa?rs=1&pid=ImgDetMain"
+              <Image
+                src="https://th.bing.com/th/id/OIP.QVON4gfL9cuF_mAQ8xXAAwHaHa?rs=1&pid=ImgDetMain"
                 alt="Coffee 2"
-                className="w-40 h-40 rounded-full border-4 border-white shadow-lg"
+                width={160} // Width of the image
+                height={160} // Height of the image
+                className="rounded-full border-4 border-white shadow-lg object-cover" // Added object-cover to maintain aspect ratio
               />
             </div>
             {/* Content below the image */}
             <h2 className="text-3xl font-semibold mt-24 mb-2">Product 2</h2>
             <p className="text-gray-600 mt-4 font-normal text-lg px-4">
               A creamy, smooth, and delightful coffee with subtle hints of chocolate and caramel. Perfect for an afternoon pick-me-up.
-              A creamy, smooth, and delightful coffee with subtle hints of chocolate and caramel. Perfect for an afternoon pick-me-up.
-              A creamy, smooth, and delightful coffee with subtle hints of chocolate and caramel. Perfect for an afternoon pick-me-up.
-           
             </p>
           </div>
-
-          {/* Card 3 */}
-          <div className="relative bg-white p-8 rounded-lg shadow-lg text-center h-[500px] transition-transform duration-300 hover:scale-105">
+           {/* Card 2 */}
+           <div className="relative bg-white p-8 rounded-lg shadow-lg text-center h-[500px] transition-transform duration-300 hover:scale-105">
             {/* Image that pops out */}
             <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
-              <img
-                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&fit=crop&w=500&q=60"
-                alt="Coffee 3"
-                className="w-40 h-40 rounded-full border-4 border-white shadow-lg"
+              <Image
+                src="https://th.bing.com/th/id/OIP.bX52vTMUaO4fSjm9EBhFlgHaHa?rs=1&pid=ImgDetMain"
+                alt="Coffee 2"
+                width={160} // Width of the image
+                height={160} // Height of the image
+                className="rounded-full border-4 border-white shadow-lg object-cover" // Added object-cover to maintain aspect ratio
               />
             </div>
             {/* Content below the image */}
-            <h2 className="text-3xl font-semibold mt-24 mb-2">Product 3</h2>
-            <p className="text-gray-600 mt-4 text-lg font-normal px-4">
-              A bold, intense roast for true coffee lovers. Packed with a strong and robust flavor, ideal for those who enjoy a powerful brew.
-              A bold, intense roast for true coffee lovers. Packed with a strong and robust flavor, ideal for those who enjoy a powerful brew.
-              A bold, intense roast for true coffee lovers. Packed with a strong and robust flavor, ideal for those who enjoy a powerful brew.
-          
-           
+            <h2 className="text-3xl font-semibold mt-24 mb-2">Product 2</h2>
+            <p className="text-gray-600 mt-4 font-normal text-lg px-4">
+              A creamy, smooth, and delightful coffee with subtle hints of chocolate and caramel. Perfect for an afternoon pick-me-up.
             </p>
           </div>
+           {/* Card 2 */}
+           <div className="relative bg-white p-8 rounded-lg shadow-lg text-center h-[500px] transition-transform duration-300 hover:scale-105">
+            {/* Image that pops out */}
+            <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
+              <Image
+                src="https://th.bing.com/th/id/OIP.GQBOOkIGxG0X63ryifIHkAHaJi?rs=1&pid=ImgDetMain"
+                alt="Coffee 2"
+                width={160} // Width of the image
+                height={160} // Height of the image
+                className="rounded-full border-4 border-white shadow-lg object-cover" // Added object-cover to maintain aspect ratio
+              />
+            </div>
+            {/* Content below the image */}
+            <h2 className="text-3xl font-semibold mt-24 mb-2">Product 2</h2>
+            <p className="text-gray-600 mt-4 font-normal text-lg px-4">
+              A creamy, smooth, and delightful coffee with subtle hints of chocolate and caramel. Perfect for an afternoon pick-me-up.
+            </p>
+          </div>
+
+          
         </div>
 
         {/* Button for more products */}
